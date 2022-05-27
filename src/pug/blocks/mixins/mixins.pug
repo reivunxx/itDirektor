@@ -1,0 +1,32 @@
+mixin icon(itemName)
+    svg(class='__icon-' + itemName)
+        use(xlink:href="image/sprite.svg#" + itemName)
+
+mixin linkButton(textBtn,linkBtn)
+    a(href=linkBtn).linkButton= textBtn
+
+mixin addSlider(sliderHeader)
+    h2.slider-header= sliderHeader
+    include ../slider/slider.pug
+
+mixin pageTitle(pageTitle)
+    div.pageTitle
+        include  ../breadcrumbs/breadcrumbs
+        h1= pageTitle
+
+mixin pageTitleCategory(pageTitle)
+    div.pageTitle
+        include  ../breadcrumbs/breadcrumbs
+        div.single-category-title
+            h1= pageTitle
+            span.single-category-title__number-item 10 вариантов
+
+mixin pageTitleBuyTour(pageTitle)
+    div.pageTitle
+        include  ../breadcrumbs/breadcrumbs
+        div.buy-tour-title
+            h1= pageTitle
+            span.buy-tour-title__desc Оставьте заявку, либо свяжитесь с нами и мы сами всё заполним.
+
+mixin addSliderWithoutH2
+    include ../slider/slider.pug

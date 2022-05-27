@@ -1,0 +1,178 @@
+$firsColor: #4D92EA;
+$secondColor: #FF716E;
+$thirdColor: #EED682;
+$fourthColor: #82B2BD;
+$textColor: #292A31;
+
+@mixin adaptivFont($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: 1920 - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivWidth($pcWidth) {
+  width: calc((#{$pcWidth + px} / 1920) * 100%);
+}
+
+@mixin adaptivMarginBottom($pcMB, $mobMB) {
+  $addSize: $pcMB - $mobMB;
+  $maxWidth: 1920 - 375;
+  margin-bottom: calc(#{$mobMB + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivMarginRight($pcMB, $mobMB) {
+  $addSize: $pcMB - $mobMB;
+  $maxWidth: 1920 - 375;
+  margin-right: calc(#{$mobMB + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivGridGap($pcGridGap, $mobGridGap) {
+  $addSize: $pcGridGap - $mobGridGap;
+  $maxWidth: 1920 - 375;
+  grid-gap: calc(#{$mobGridGap + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+.blog {
+  display: grid;
+  @include adaptivGridGap(32, 24);
+  grid-template-columns: repeat(6, 1fr);
+
+  @media (max-width: 1760px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: 200px 1fr 1fr 1fr;
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-category-filter {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    @media (max-width: 550px) {
+      .blog-category__filter-body {
+        display: none;
+      }
+    }
+  }
+
+  .blog__posts {
+    grid-column-start: 2;
+    grid-column-end: 7;
+
+    @media (max-width: 1760px) {
+      grid-column-start: 2;
+      grid-column-end: 6;
+    }
+    @media (max-width: 1400px) {
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
+    @media (max-width: 550px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    .blog__post {
+      display: grid;
+      @include adaptivGridGap(32, 24);
+      grid-template-columns: repeat(4, 1fr);
+      @include adaptivMarginBottom(32, 24);
+      transition: ease 0.3s;
+
+      .blog__post-img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        @media (max-width: 1024px) {
+          grid-column-start: 1;
+          grid-column-end: 5;
+        }
+
+        img {
+          transition: ease 0.3s;
+          object-fit: cover;
+          border-radius: 20px;
+          max-height: 15vw;
+          width: 100%;
+          height: 15vw;
+
+          @media (max-width: 1400px) {
+            max-height: 230px;
+            width: 100%;
+            height: 230px;
+          }
+          @media (max-width: 1024px) {
+            max-height: 300px;
+            width: 100%;
+            height: 300px;
+          }
+          @media (max-width: 550px) {
+            max-height: 261px;
+            width: 100%;
+            height: 261px;
+          }
+        }
+      }
+
+      .blog__post-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .blog__post-text {
+        @include adaptivFont(18, 16);
+        font-weight: 300;
+        margin-bottom: 16px;
+        line-height: 120%;
+      }
+
+
+      .blog__post-tags {
+        display: flex;
+        margin-top: -8px;
+        flex-wrap: wrap;
+
+        .blog__post-tag {
+          margin-top: 8px;
+          margin-right: 8px;
+          background: $secondColor;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          padding: 4px 8px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+          }
+
+          span {
+            font-size: 14px;
+            color: white;
+            font-weight: 300;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog__post-info {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media (max-width: 1024px) {
+    grid-column-start: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

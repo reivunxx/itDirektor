@@ -1,0 +1,121 @@
+$firsColor: #4D92EA;
+$secondColor: #FF716E;
+$thirdColor: #EED682;
+$fourthColor: #82B2BD;
+$textColor: #292A31;
+
+@mixin adaptivFont($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: 1920 - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivWidth($pcWidth) {
+  width: calc((#{$pcWidth + px} / 1920) * 100%);
+}
+
+@mixin adaptivMarginBottom($pcMB, $mobMB) {
+  $addSize: $pcMB - $mobMB;
+  $maxWidth: 1920 - 375;
+  margin-bottom: calc(#{$mobMB + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivGridGap($pcGridGap, $mobGridGap) {
+  $addSize: $pcGridGap - $mobGridGap;
+  $maxWidth: 1920 - 375;
+  grid-gap: calc(#{$mobGridGap + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+.contacts{
+  display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 24px;
+
+  }
+
+  h1{
+    @include adaptivMarginBottom(64, 24);
+  }
+
+  .contacts__info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+      margin-bottom: 32px;
+
+    }
+
+    .contacts__button{
+      margin-top: 24px;
+      @media (max-width: 767px) {
+        margin: 24px auto;
+        .linkButton{
+          padding: 0 58px;
+          height: 56px;
+        }
+      }
+    }
+  }
+
+  .contacts__item{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+
+    svg{
+      min-width: 25px;
+      max-width: 25px;
+      height: 25px;
+      fill: $textColor;
+    }
+
+    span{
+      margin-left: 8px;
+      @include adaptivFont(18,18);
+      line-height: 120%;
+    }
+
+
+  }
+  .contacts__img{
+    flex: 1;
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.contacts__item_underline{
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.contacts__mobile-map{
+  padding: 16px 24px;
+  border-radius: 20px;
+  background: $secondColor;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 8px auto;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  svg{
+    fill: white;
+    max-width: 25px;
+    min-width: 25px;
+    max-height: 25px;
+  }
+
+  span{
+    color: white;
+  }
+}

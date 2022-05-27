@@ -1,0 +1,66 @@
+$firsColor: #4D92EA;
+$secondColor: #FF716E;
+$thirdColor: #EED682;
+$fourthColor: #82B2BD;
+$textColor: #292A31;
+
+@mixin adaptivFont($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: 1920 - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivMargin($pcMargin, $mobMargin) {
+  $addMargin: $pcMargin - $mobMargin;
+  $maxWidth: 1920 - 375;
+  margin-left: calc(#{$mobMargin + px} + #{$addMargin} * ((100vw - 375px) / #{$maxWidth}));
+  margin-right: calc(#{$mobMargin + px} + #{$addMargin} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+body {
+  overflow-x: hidden;
+  color: $textColor;
+}
+
+h1 {
+  @include adaptivFont(56, 28);
+  font-weight: 900;
+}
+
+h2 {
+  @include adaptivFont(32, 24);
+  font-weight: 900;
+}
+
+h3 {
+  @include adaptivFont(24, 20);
+  font-weight: 700;
+}
+
+p {
+  @include adaptivFont(24, 16);
+}
+
+body, p, h1, h2, h3, h4, span, a {
+  margin: 0;
+  padding: 0;
+  font-family: NeueHaasUnica, sans-serif;
+}
+
+p, h1, h2, h3, h4, a {
+  color: $textColor;
+  line-height: 100%;
+
+}
+
+h1,h2,h3,h4 {
+  word-break: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  @include adaptivMargin(96, 16)
+}

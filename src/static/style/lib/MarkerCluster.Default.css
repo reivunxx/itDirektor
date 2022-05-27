@@ -1,0 +1,23 @@
+
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+.marker-cluster div {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 100%;
+	background: #0d95e8;
+	border: 3px solid white;
+	font: 12px NeueHaasUnica, sans-serif
+	}
+.marker-cluster span {
+	font-size: 24px;
+	line-height: 24px;
+	color: white;
+	}

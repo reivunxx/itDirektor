@@ -1,0 +1,132 @@
+include ../blocks/mixins/mixins.pug
+
+doctype html
+html(lang="ru-RU")
+    include ../blocks/head/head.pug
+    body
+        div.container
+            include ../blocks/header/header.pug
+            +pageTitle('Волгоград: самое интересное')
+
+            div.sights-btn
+                div.sights-btn__list
+                    button(id='sights-btn__all').sights-btn__all.sights-btn__list-btn_active
+                        p Все развлечения
+                    button(id='sights-btn__tourism').sights-btn__tourism
+                        p Туризм
+                    button(id='sights-btn__business').sights-btn__business
+                        p Бизнес
+                div.sights-btn__map
+                    +icon("map-btn")
+                    p Показать карту
+
+            div.category-slider
+                div.cat-slider__slides
+                    - for (let sliderBus = 0; sliderBus < 5; sliderBus++)
+                        a(href="single-category.html" data-cat-role='business_category').catalog-category__item.cat-slider__slides-item.category-btn-hover
+                            div.cat-slider__slides-item-img
+                                img(src='image/category/hotel.png')
+                            h3.cat-slider__slides-item-title БИЗНЕС
+
+                    - for (let sliderTourism = 15; sliderTourism < 20; sliderTourism++)
+                        a(href="single-category.html" data-cat-role='tourist_category').catalog-category__item.cat-slider__slides-item.category-btn-hover
+                            div.cat-slider__slides-item-img
+                                img(src='image/category/hotel.png')
+                            h3.cat-slider__slides-item-title ТУРИЗМ
+
+                div.cat-slider__slides-controls
+                    div.cat-slider__slides-next-button
+                        +icon("arrow")
+                    div.cat-slider__slides-prev-button
+                        +icon("arrow")
+
+            div.category-grid-list
+                div(data-check='category-grid__open').category-grid__btn.category-grid__btn_open
+                    p Показать все категории
+                div.category-grid-container
+                    div.category-grid
+                        - for (let bus = 0; bus < 5; bus++)
+                            a(href="#" data-cat-role='business_category').catalog-category__item.category-btn-hover
+                                div.cat-slider__slides-item-img
+                                    img(src='image/category/hotel.png')
+                                h3.cat-slider__slides-item-title= bus
+
+                        - for (let tourism = 15; tourism < 20; tourism++)
+                            a(href="#" data-cat-role='tourist_category').catalog-category__item.category-btn-hover
+                                div.cat-slider__slides-item-img
+                                    img(src='image/category/hotel.png')
+                                h3.cat-slider__slides-item-title= tourism
+
+            - for (let x = 0; x < 5; x++)
+                div.dost-cat-info
+                    div.dost-cat-info__title
+                        h2 Отели
+                        +linkButton("Показать все: Отели")
+                    +addSliderWithoutH2
+                    div.dost-cat-info__mob-btn
+                        +linkButton("Показать все: Отели")
+
+            div.top-sight
+                h2 Волгоград: лучшие достопримечательности
+                div.top-sight__fist-second
+                    a(href="").top-sight__item.post-hover
+                        div.top-sight__item-image
+                            img(src="image/test-2-big.png")
+                        div.top-sight__item-desc
+                            span.top-sight__item-desc-tag памятники
+                            h3 1. Скульктура Родина-Мать зовет
+                            div.top-sight__item-desc-rating
+                                div.top-sight__item-desc-rating-text
+                                    +icon("star")
+                                    span 5
+                                p 3 отзыва
+                            p Памятники и статуи, Культурные объекты и достопримечательности
+                    a(href="").top-sight__item.post-hover
+                        div.top-sight__item-image
+                            img(src="image/test-2-big.png")
+                        div.top-sight__item-desc
+                            span.top-sight__item-desc-tag памятники
+                            h3 2. Государственный историко-мемориальный музей-заповедник Сталинградская битва
+                            div.top-sight__item-desc-rating
+                                div.top-sight__item-desc-rating-text
+                                    +icon("star")
+                                    span 5
+                                p 3 отзыва
+                            p Памятники и статуи, Культурные объекты и достопримечательн
+                div.top-sight__other-item-list
+                    -for (let b = 3; b < 11; b++)
+                        a(href="").top-sight__other-item.post-hover
+                            div.top-sight__other-item-image
+                                img(src="image/test-2-big.png")
+                            div.top-sight__other-item-desc
+                                span.top-sight__other-item-desc-tag памятники
+                                h3= b
+                                    |. Скульктура Родина-Мать зовет
+                                div.top-sight__other-item-desc-rating
+                                    div.top-sight__other-item-desc-rating-text
+                                        +icon("star")
+                                        span 5
+                                    p 3 отзыва
+                                p Памятники и статуи, Культурные объекты и достопримечательности
+
+            div.faq-container
+                h2 Волгоград: часто задаваемые вопросы
+                div.faq-content
+                    div.faq-content__list
+                        -for(var c = 0; c < 3; c++)
+                            div.faq-content__list-item
+                                div(data-check='close_question').faq-content__list-item-title
+                                    h3 Я приезжаю на 1 день, на что стоит посмотреть?
+                                    div.faq-content__list-item-title-icon
+                                        div.faq-content__list-item-title-icon-body
+                                            +icon('arrow')
+                                div.faq-content__list-item-text
+                                    p По мнению путешественников, это лучшие места для посещения:
+                                        |— Скульктура Родина-Мать зовет
+                                        |— Волго-Донский судоходный канал имени В. И. Ленина
+                                        |— Парк-сквер Саши Филиппова
+                                        |— Парк Победы
+                                        |— Государственный историко-мемориальный музей-заповедник Сталинградская битва
+                    div.faq-image
+                        img(src='image/walk-faq.png')
+        include ../blocks/footer/footer.pug

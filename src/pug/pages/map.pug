@@ -1,0 +1,52 @@
+include ../blocks/mixins/mixins.pug
+
+doctype html
+html(lang="ru-RU")
+    include ../blocks/head/head.pug
+    body
+        div.container
+            include ../blocks/header/header.pug
+            +pageTitle("Карта")
+            .map-block
+                div(id='map').map-wrapper
+                .map-popup
+                    .map-popup__close-btn Закрыть
+                    img(src="/image/slider-1.jpg").map-popup__img
+                    h2.map-popup__title Отель "Южный"
+                    .map-popup__rating-block
+                        .map-popup__rating
+                            +icon("star")
+                            span 5
+                        .map-popup__review-counter отзывы — 6
+                        .map-popup__price
+                            +icon("coin")
+                            p от 1000 ₽ до 5000 ₽
+                    p.map-popup__desc Отель «Южный» - современный демократичный отель в центре Волгограда.
+                    .map-popup__tags
+                        div.map-popup__post-tag
+                            +icon("tag")
+                            span Название тэга
+                        div.map-popup__post-tag
+                            +icon("tag")
+                            span Название тэга
+                        div.map-popup__post-tag
+                            +icon("tag")
+                            span Название тэга
+                        div.map-popup__post-tag
+                            +icon("tag")
+                            span Название тэга
+                    .map-popup__adress
+                        +icon('map-point-icon')
+                        span Ворошиловский район, ул. Рабоче - Крестьянская, 18, Волгоград 400074 Россия
+                    a.map-popup__build-track
+                        +icon('map-point-icon')
+                        span Построить маршрут
+                    .map-popup__show-more
+                        +linkButton("Подробнее", "#")
+
+            +addSlider('Рекомендуем посмотреть')
+            include ../blocks/ad/ad
+            include ../blocks/subscribe/subscribe
+            +addSlider('Последние добавленные туры')
+
+        include ../blocks/footer/footer.pug

@@ -1,0 +1,50 @@
+$h1: 1rem;
+$h2: 0.87rem;
+$h3: 0.43rem;
+$textSize: 0.313rem;
+$btnSize: 0.435rem;
+
+@font-face {
+  font-family: 'NeueHaasUnica';
+  src: url("../fonts/NeueHaasUnica-Regular.eot");
+  src: url("../fonts/NeueHaasUnica-Regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/NeueHaasUnica-Regular.woff2") format("woff2"),
+  url("../fonts/NeueHaasUnica-Regular.woff") format("woff"),
+  url("../fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'NeueHaasUnica';
+  src: url("../fonts/NeueHaasUnica-Medium.eot");
+  src: url("../fonts/NeueHaasUnica-Medium.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/NeueHaasUnica-Medium.woff2") format("woff2"),
+  url("../fonts/NeueHaasUnica-Medium.woff") format("woff"),
+  url("../fonts/NeueHaasUnica-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'NeueHaasUnica';
+  src: url("../fonts/NeueHaasUnica-ExtraBold.eot");
+  src: url("../fonts/NeueHaasUnica-ExtraBold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/NeueHaasUnica-ExtraBold.woff2") format("woff2"),
+  url("../fonts/NeueHaasUnica-ExtraBold.woff") format("woff"),
+  url("../fonts/NeueHaasUnica-ExtraBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'NeueHaasUnica';
+  src: url("../fonts/NeueHaasUnica-Black.eot");
+  src: url("../fonts/NeueHaasUnica-Black.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/NeueHaasUnica-Black.woff2") format("woff2"),
+  url("../fonts/NeueHaasUnica-Black.woff") format("woff"),
+  url("../fonts/NeueHaasUnica-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal
+}
+

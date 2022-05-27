@@ -1,0 +1,43 @@
+include ../blocks/mixins/mixins.pug
+
+doctype html
+html(lang="ru-RU")
+    include ../blocks/head/head.pug
+    body
+        div.container
+            include ../blocks/header/header.pug
+            +pageTitle("Блог")
+            div.blog
+                div.blog-category-filter
+                    div(id='btnMobileFilter' check-mobile-filter="close").sin-cat-cont__filter-mobile-btn
+                        +icon("filter-icon")
+                        p Фильтр
+                    div.blog-category__filter-body
+                        include ../blocks/sidebar/sidebar
+                div.blog__posts
+                    - var n = 0;
+                    while n < 6
+                        a(href="blog-single.html").blog__post.post-hover
+                            .blog__post-img
+                                img(src="/image/slider-1.jpg")
+                            .blog__post-info
+                                h3.blog__post-title Памятник-ансамбль «Героям Сталинградской битвы» на Мамаевом кургане
+                                p.blog__post-text Главной культурной ценностью и гордостью города-героя Волгограда является историко-мемориальный комплекс «Героям Сталинградской битвы» на Мамаевом кургане.Сегодня Мамаев курган — одна из господствующих над Волгоградом высот. По легенде, во времена правления хана Мамая с этих высот монгольские стражники контролировали движение судов по Волге, что послужило одной из версий названия холма.
+                                div.blog__post-tags
+                                    div.blog__post-tag
+                                        +icon("tag")
+                                        span Название тэга
+                                    div.blog__post-tag
+                                        +icon("tag")
+                                        span Название тэга
+                                    div.blog__post-tag
+                                        +icon("tag")
+                                        span Название тэга
+                                    div.blog__post-tag
+                                        +icon("tag")
+                                        span Название тэга
+                        -n++
+                    include ../blocks/pagination/pagination
+            +addSlider("Рекомендуем посмотреть")
+            include ../blocks/subscribe/subscribe
+        include ../blocks/footer/footer.pug

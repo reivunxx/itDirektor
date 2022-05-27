@@ -1,0 +1,96 @@
+$firsColor: #4D92EA;
+$secondColor: #FF716E;
+$thirdColor: #EED682;
+$fourthColor: #82B2BD;
+$textColor: #292A31;
+
+@mixin adaptivFont($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: 1920 - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivMargin($pcMargin, $mobMargin) {
+  $addMargin: $pcMargin - $mobMargin;
+  $maxWidth: 1920 - 375;
+  margin-left: calc(#{$mobMargin + px} + #{$addMargin} * ((100vw - 375px) / #{$maxWidth}));
+  margin-right: calc(#{$mobMargin + px} + #{$addMargin} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivMarginBottom($pcMB, $mobMB) {
+  $addSize: $pcMB - $mobMB;
+  $maxWidth: 1920 - 375;
+  margin-bottom: calc(#{$mobMB + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptivGridGap($pcGridGap, $mobGridGap) {
+  $addSize: $pcGridGap - $mobGridGap;
+  $maxWidth: 1920 - 375;
+  grid-gap: calc(#{$mobGridGap + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+
+  .blog-content__main-img {
+    img {
+      object-fit: cover;
+      height: 500px;
+      border-radius: 20px;
+      width: 100%;
+      @include adaptivMarginBottom(64, 24);
+
+      @media (max-width: 1024px) {
+        height: 343px;
+      }
+    }
+  }
+
+  .blog-content__text {
+    font-weight: 300;
+    line-height: 120%;
+    @include adaptivMargin(164, 20);
+    @include adaptivMarginBottom(64, 24);
+    @media (max-width: 550px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.blog-content-category {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  @include adaptivMarginBottom(24,16);
+
+  span {
+    font-weight: 700;
+    @include adaptivFont(24, 16);
+    color: $textColor;
+    margin-right: 16px;
+  }
+}
+
+.blog-content-category-tag {
+  background: #FF716E;
+  border-radius: 20px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: 8px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+  }
+}
