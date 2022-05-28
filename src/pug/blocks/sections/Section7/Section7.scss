@@ -1,0 +1,20 @@
+.scrollSection__marquee {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+
+  .marquee__item {
+    height: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    transition: .3s;
+    filter: grayscale(1);
+
+    &:hover{
+      filter: grayscale(0);
+    }
+
+  }
+}
