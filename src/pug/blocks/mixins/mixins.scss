@@ -1,85 +1,40 @@
-$firsColor: #4D92EA;
-$secondColor: #FF716E;
-$thirdColor: #EED682;
-$fourthColor: #82B2BD;
-$textColor: #292A31;
-
-@mixin adaptivFont($pcSize, $mobSize) {
-  $addSize: $pcSize - $mobSize;
-  $maxWidth: 1920 - 375;
-  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
-}
-
-@mixin adaptivWidth($pcWidth) {
-  width: calc((#{$pcWidth + px} / 1920) * 100%);
-}
-
-@mixin adaptivMarginBottom($pcMB, $mobMB) {
-  $addSize: $pcMB - $mobMB;
-  $maxWidth: 1920 - 375;
-  margin-bottom: calc(#{$mobMB + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
-}
-
-@mixin adaptivGridGap($pcGridGap, $mobGridGap) {
-  $addSize: $pcGridGap - $mobGridGap;
-  $maxWidth: 1920 - 375;
-  grid-gap: calc(#{$mobGridGap + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
-}
-
 .linkButton{
-  padding-left: 24px;
-  padding-right: 24px;
-  background: $firsColor;
-  box-shadow: 0px 14px 44px rgba(77, 146, 234, 0.35);
-  border-radius: 20px;
-  color: #ffffff;
-  text-align: center;
-  @include adaptivFont(24,16);
-  font-weight: 500;
-  height: 56px;
-  width: fit-content;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: ease 0.3s;
+  padding: 12px 24px;
+  color: white;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
-  &:hover{
-    box-shadow: 5px 5px 0px $secondColor, 10px 10px 0px $thirdColor;
-    transform: translate(-10px,-10px);
-  }
-  @media (max-width: 767px) {
-    padding-left: 16px;
-    padding-right: 16px;
-    height: 40px;
-  }
-}
 
 
-.pageTitle{
-    @include adaptivMarginBottom(64,24);
-  @media (max-width: 330px) {
-    word-break: break-word;
+  &.thin{
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    
+    &:hover{
+      border-color: #490280;
+      color: #490280;
+    }
+    &:after{
+      background: none;
+    }
   }
-}
 
-.single-category-title{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  span{
-    color: #82B2BD;
-    font-weight: 700;
-    text-transform: uppercase;
-    @include adaptivFont(24, 16)
+  &:hover:after{
+    transform: translateX(-50%);
   }
-}
 
-.buy-tour-title{
-  display: grid;
-  @include adaptivGridGap(16,8);
-  span{
-    @include adaptivFont(24,16);
-    font-weight: 300;
-    color: $textColor;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(266.53deg, #371A4F 0%, #490182 100%);
+    transition: .3s;
+    z-index: -1;
   }
 }

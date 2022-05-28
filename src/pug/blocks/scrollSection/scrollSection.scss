@@ -1,0 +1,143 @@
+.sc__wrap{
+  box-sizing: border-box;
+  position: relative;
+}
+
+.scrollSection {
+  height: 180vh;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+
+  &:before {
+    width: 1px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    background: #8d8e9b;
+    opacity: .5;
+    mix-blend-mode: difference;
+  }
+
+  .scrollSection__icon {
+    height: 48px;
+    width: 48px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background: white;
+    align-self: flex-start;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .scrollSection__contentAlign{
+    display: flex;
+    width: 100%;
+  }
+
+  .scrollSection__content {
+    position: sticky;
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    top: 10vh;
+    margin-top: 8px;
+    width: 100%;
+
+  }
+}
+
+//SECTION 1
+.scrollSection__titleBig {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 120%;
+}
+
+
+.scrollSection__contentWrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+
+
+  .scrollSection__textBlockWrap {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.4);
+    width: max-content;
+    padding: 8px;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+
+
+    .scrollSection__boldText {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    .scrollSection__caption {
+      max-width: 440px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      margin-top: 12px;
+    }
+
+
+  }
+
+  .scrollSection__img {
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    z-index: -1;
+
+    max-width: 480px;
+    max-height: 320px;
+  }
+
+
+  .scrollSection__imgWrap1 {
+    .img1 {
+      position: absolute;
+      right: 0;
+      top: -20vh;
+    }
+
+    .img2 {
+      position: absolute;
+      right: 20%;
+    }
+  }
+
+  .scrollSection__imgWrap3 {
+    .img1 {
+      position: absolute;
+      right: 5%;
+      top: -20vh;
+    }
+
+    .img2 {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .scrollSection__imgWrap4 {
+    .img1 {
+      position: absolute;
+      right: 0;
+      top: -10vh;
+    }
+
+  }
+}

@@ -4,47 +4,28 @@ $h3: 0.43rem;
 $textSize: 0.313rem;
 $btnSize: 0.435rem;
 
-@font-face {
-  font-family: 'NeueHaasUnica';
-  src: url("../fonts/NeueHaasUnica-Regular.eot");
-  src: url("../fonts/NeueHaasUnica-Regular.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/NeueHaasUnica-Regular.woff2") format("woff2"),
-  url("../fonts/NeueHaasUnica-Regular.woff") format("woff"),
-  url("../fonts/NeueHaasUnica-Regular.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap');
+
+a, button, li, span, p, h1, h2, h3, h4, h5, h6, div {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: 'NeueHaasUnica';
-  src: url("../fonts/NeueHaasUnica-Medium.eot");
-  src: url("../fonts/NeueHaasUnica-Medium.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/NeueHaasUnica-Medium.woff2") format("woff2"),
-  url("../fonts/NeueHaasUnica-Medium.woff") format("woff"),
-  url("../fonts/NeueHaasUnica-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal
-}
-
-@font-face {
-  font-family: 'NeueHaasUnica';
-  src: url("../fonts/NeueHaasUnica-ExtraBold.eot");
-  src: url("../fonts/NeueHaasUnica-ExtraBold.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/NeueHaasUnica-ExtraBold.woff2") format("woff2"),
-  url("../fonts/NeueHaasUnica-ExtraBold.woff") format("woff"),
-  url("../fonts/NeueHaasUnica-ExtraBold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal
-}
-
-@font-face {
-  font-family: 'NeueHaasUnica';
-  src: url("../fonts/NeueHaasUnica-Black.eot");
-  src: url("../fonts/NeueHaasUnica-Black.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/NeueHaasUnica-Black.woff2") format("woff2"),
-  url("../fonts/NeueHaasUnica-Black.woff") format("woff"),
-  url("../fonts/NeueHaasUnica-Black.ttf") format("truetype");
+.h1Bold {
   font-weight: 900;
-  font-style: normal
+  font-size: 36px;
+  line-height: 120%;
+}
+
+.caption {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.fbutton{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
 }
 
