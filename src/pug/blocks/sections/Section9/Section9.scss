@@ -1,0 +1,49 @@
+
+
+.sc9__top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  .sc9__buttons {
+    display: flex;
+
+    a:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.sc9__slider{
+  display: flex;
+  margin-top: 80px;
+
+  .slider__slide{
+    height: 600px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    transition: .3s;
+    margin-right: 20px;
+
+    &:hover{
+      width: 460px;
+    }
+
+    .slider__slideTitle{
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 120%;
+      text-shadow: 0 0 25px #000000;
+      padding: 20px;
+      box-sizing: border-box;
+      color: white;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
