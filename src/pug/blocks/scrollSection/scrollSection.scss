@@ -3,6 +3,7 @@
   position: relative;
 }
 
+
 .scrollSection {
   height: 200vh;
   position: relative;
@@ -11,7 +12,7 @@
   padding-top: 128px;
   padding-bottom: 128px;
 
-  &:before {
+  .scrollLine {
     width: 1px;
     height: 100%;
     content: "";
@@ -22,7 +23,9 @@
     background: #8d8e9b;
     opacity: .5;
     mix-blend-mode: difference;
+
   }
+
 
   .scrollSection__icon {
     height: 48px;
@@ -165,7 +168,7 @@
     &.active {
       width: 480px;
 
-      .team__photo{
+      .team__photo {
         filter: grayscale(0);
       }
     }

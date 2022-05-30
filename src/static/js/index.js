@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         const triggerOpt = {
             trigger: section,
-            start: "top top"
+            start: "top center"
         }
 
         //icons
@@ -15,6 +15,14 @@ $(document).ready(function () {
             opacity: 0,
             scrollTrigger: triggerOpt
         })
+
+        if (section.has('.sc1').length != 0) {
+            gsap.from(section.find('.scrollLine'), {
+                height: '10px',
+                scrollTrigger: triggerOpt,
+                duration: 1.5
+            })
+        }
 
 
         if (section.has('.scrollSection__titleBig').length != 0) {

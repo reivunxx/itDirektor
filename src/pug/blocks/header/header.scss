@@ -40,6 +40,11 @@
       font-size: 16px;
       line-height: 150%;
       color: white;
+      transition: .3s;
+
+      &:hover{
+        transform: translateY(3px);
+      }
 
       &:not(:last-child){
         margin-right: 32px;
