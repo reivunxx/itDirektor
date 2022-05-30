@@ -1,16 +1,29 @@
 include ../mixins/mixins.pug
 
-div.goToTop
-    +icon('arrow')
 
 div.footer
+    div.block1
+        img(src='image/footerBG.svg').block1BG
+        div.b1__textWrap
+            div.b1__titleWrap
+                p.b1__textbig Свяжитесь с нами
+                    p.b1__text Остались вопросы? <br>Скорее набирай и мы поможем создать <br> лучшие бизнес-процессы.
+            a(href='#').b1__textWithicon
+                img(src='image/msg.svg').b1__icon
+                p.b1__text go@it-d.online
+            a(href='#').b1__textWithicon
+                img(src='image/phone.svg').b1__icon
+                p.b1__text +7(495) 799-00-65
+        div.b1__form
+
+    div.block2
 
 
 
 
-script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
 script(src='js/lib/jquery.min.js')
 script(src='js/lib/slick.min.js')
+script(src='js/lib/swiper-bundle.min.js')
 script(src='js/lib/jquery.fancybox.min.js')
 script(src='js/lib/leaflet.js')
 script(src='js/lib/leaflet-gesture-handling.min.js')
