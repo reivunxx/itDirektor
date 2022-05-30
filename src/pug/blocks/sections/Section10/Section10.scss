@@ -1,6 +1,8 @@
 
 .sc10__slider {
   margin-top: 120px;
+  width: 100%;
+  overflow: hidden;
 
   .slider__slide {
     display: flex;
@@ -52,5 +54,15 @@
         }
       }
     }
+  }
+
+}
+.sc10swiper-scrollbar{
+  margin-top: 40px;
+  z-index: 0 !important;
+  height: 10px;
+
+  .swiper-scrollbar-drag {
+    background: linear-gradient(266.53deg, #371A4F 0%, #490182 100%);
   }
 }

@@ -15,8 +15,38 @@ div.footer
                 img(src='image/phone.svg').b1__icon
                 p.b1__text +7(495) 799-00-65
         div.b1__form
+            div.footer__inputWrap
+                p.input__title Имя
+                input(id='fName').footer__input
+            div.footer__inputWrap
+                p.input__title Email
+                input(id='fEmail').footer__input
+            div.footer__inputWrap
+                p.input__title Комментарий
+                textarea(id='fText' ).footer__input
+            div.footer__inputWrap.btn
+                +linkButton('Отправить', '#')
 
     div.block2
+        div.b2__line1
+            a(href='#').b2__logo
+                img(src='image/logo.png')
+            div.b2__navs
+                a.b2__nav О нас
+                a.b2__nav Услуги
+                a.b2__nav Кейсы
+                a.b2__nav Команда
+            div.b2__links
+                a(href='#').b2_link
+                    img(src='image/sections/vk.png')
+                a(href='#').b2_link
+                    img(src='image/sections/tg.png')
+        div.line-gap
+        div.b2__line2
+            p.line2__text 2022 IT-Direktor. Все права защищены.
+            a(href="#").line2__text Политика конфиденциальности
+            a(href="#").line2__text Условия пользования
+            a(href="#").line2__text Cookies
 
 
 

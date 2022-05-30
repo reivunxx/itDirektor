@@ -7,3 +7,11 @@ mixin linkButton(textBtn,linkBtn)
 
 mixin linkButtonThin(textBtn,linkBtn)
     a(href=linkBtn).linkButton.fbutton.thin= textBtn
+
+mixin input(inputText, inputId, inputType)
+    div.input_wrap
+        p.input__title= inputText
+        if inputType=='input'
+            input(id=inputId)
+        if inputType=='textarea'
+            textarea(id=inputId)

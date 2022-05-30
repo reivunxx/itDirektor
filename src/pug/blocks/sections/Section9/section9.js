@@ -3,7 +3,7 @@ $(document).ready(function () {
         slidesPerView: 1,
         spaceBetween: 0,
         scrollbar: {
-            el: '.swiper-scrollbar',
+            el: '.sc9swiper-scrollbar',
             draggable: true
         },
         autoHeight: true,

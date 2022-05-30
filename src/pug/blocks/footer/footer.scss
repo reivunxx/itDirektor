@@ -10,6 +10,8 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
 
     .block1BG {
       position: absolute;
@@ -62,6 +64,126 @@
       p {
         color: white;
       }
+    }
+  }
+
+  .block2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 128px;
+
+    background: #2F253F;
+
+
+    .b2__line1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+
+      .b2__navs {
+        display: flex;
+        align-items: center;
+
+        .b2__nav {
+          color: white;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 150%;
+          transition: .3s;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+
+          &:not(:last-child) {
+            margin-right: 32px;
+          }
+        }
+      }
+
+      .b2__links {
+        display: flex;
+        align-items: center;
+
+        .b2_link {
+          margin-left: 12px;
+
+          img {
+            height: 24px;
+            width: 24px;
+
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    .line-gap {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      background: white;
+      height: 1px;
+      width: 100%;
+    }
+
+    .b2__line2 {
+      display: flex;
+      align-items: center;
+
+      .line2__text {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 150%;
+        color: white;
+
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+      }
+    }
+
+  }
+}
+
+.b1__form {
+  display: flex;
+  flex-direction: column;
+  width: 660px;
+  margin-left: 40px;
+
+  .footer__inputWrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    &.btn{
+      width: max-content;
+    }
+
+    .input__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    textarea{
+      height: 180px;
+    }
+
+    .footer__input{
+      width: 100%;
+      border-radius: 6px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      padding: 12px;
+      resize: none;
     }
   }
 }
