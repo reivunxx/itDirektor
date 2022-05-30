@@ -2,10 +2,10 @@ div.header.globalPadding
     a.header__logo
         img(src='image/logo.png')
     div.header__navs
-        a.header__nav О нас
-        a.header__nav Услуги
-        a.header__nav Кейсы
-        a.header__nav Команда
+        a(href='#about').header__nav О нас
+        a(href='#service').header__nav Услуги
+        a(href="#cases").header__nav Кейсы
+        a(href='#team').header__nav Команда
     div.header__buttons
         +linkButtonThin("Написать нам")
         +linkButton("Войти")

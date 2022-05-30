@@ -3,6 +3,11 @@
   flex-direction: column;
   width: 100%;
 
+  .linkButton.thin{
+    border-color: white;
+    color: white;
+  }
+
   .sc6__titleWrap {
     display: flex;
     align-items: center;

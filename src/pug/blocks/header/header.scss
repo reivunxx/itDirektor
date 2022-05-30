@@ -4,6 +4,26 @@
   left: 0;
   right: 0;
 
+  &.white{
+    .header__logo{
+      filter: brightness(1);
+    }
+
+    .header__navs{
+      filter: brightness(1);
+    }
+
+    .linkButton.thin{
+      border-color: white;
+      color: white;
+    }
+  }
+
+  .header__logo{
+    filter: brightness(0);
+    transition: .3s;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -12,6 +32,8 @@
   .header__navs{
     display: flex;
     justify-content: center;
+    filter: brightness(0);
+    transition: .3s;
 
     .header__nav{
       font-weight: 300;

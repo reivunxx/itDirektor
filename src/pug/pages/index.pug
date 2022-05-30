@@ -4,17 +4,21 @@ doctype html
 html(lang="ru-RU")
     include ../blocks/head/head.pug
     body
-        div.container
+        div(id='container').container
             include ../blocks/header/header.pug
             include ../blocks/hero/hero
-            include ../blocks/sections/Section1
+            div(id='about')
+                include ../blocks/sections/Section1
             include ../blocks/sections/Section2
             include ../blocks/sections/Section3
             include ../blocks/sections/Section4
             include ../blocks/sections/Section5
-            include ../blocks/sections/Section6/Section6
-            include ../blocks/sections/Section7/Section7
-            include ../blocks/sections/Section8/Section8
+            div(id='service')
+                include ../blocks/sections/Section6/Section6
+            div(id='cases')
+                include ../blocks/sections/Section7/Section7
+            div(id='team')
+                include ../blocks/sections/Section8/Section8
             include ../blocks/sections/Section9/Section9
             include ../blocks/sections/Section10/Section10
 

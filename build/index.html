@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="header globalPadding"><a class="header__logo"><img src="image/logo.png"></a>
-        <div class="header__navs"><a class="header__nav">О нас</a><a class="header__nav">Услуги</a><a class="header__nav">Кейсы</a><a class="header__nav">Команда</a></div>
+        <div class="header__navs"><a class="header__nav" href="#about">О нас</a><a class="header__nav" href="#service">Услуги</a><a class="header__nav" href="#cases">Кейсы</a><a class="header__nav" href="#team">Команда</a></div>
         <div class="header__buttons"><a class="linkButton fbutton thin">Написать нам</a><a class="linkButton fbutton">Войти</a>
         </div>
       </div>
-      <div class="hero globalPadding">
+      <div class="hero globalPadding" id="hero">
         <div class="hero__bg"><img src="image/herobg.png"></div>
         <div class="hero__content">
           <h2 class="h1Bold hero__title">Решение любых задач по сайту, CRM и 1С: от настройки до продвижения.</h2>
@@ -25,15 +25,17 @@
         </div>
         <div class="hero_arrow"><img src="image/arrow.png"></div>
       </div>
-      <div class="sc__wrap globalPadding">
-        <div class="sc__bg"></div>
-        <div class="scrollSection">
-          <div class="scrollSection__content">
-            <div class="scrollSection__contentAlign">
-              <div class="scrollSection__icon"><img src="image/sections/section1icon.png"></div>
-              <div class="sc1">
-                <div class="overflow">
-                  <h2 class="scrollSection__titleBig">Почему работать с нами выгодно?</h2>
+      <div id="about">
+        <div class="sc__wrap globalPadding">
+          <div class="sc__bg"></div>
+          <div class="scrollSection">
+            <div class="scrollSection__content">
+              <div class="scrollSection__contentAlign">
+                <div class="scrollSection__icon"><img src="image/sections/section1icon.png"></div>
+                <div class="sc1">
+                  <div class="overflow">
+                    <h2 class="scrollSection__titleBig">Почему работать с нами выгодно?</h2>
+                  </div>
                 </div>
               </div>
             </div>
@@ -116,40 +118,70 @@
           </div>
         </div>
       </div>
-      <div class="sc__wrap globalPadding">
-        <div class="sc__bg"><img class="sc6__bg" src="image/sections/section6bg.svg"></div>
-        <div class="scrollSection">
-          <div class="scrollSection__content">
-            <div class="scrollSection__contentAlign">
-              <div class="scrollSection__icon"><img src="image/sections/section6icon.png"></div>
-              <div class="sc6">
-                <div class="sc6__titleWrap">
-                  <div class="overflow">
-                    <p class="sc6__title">Какие задачи мы решаем?</p>
+      <div id="service">
+        <div class="sc__wrap globalPadding">
+          <div class="sc__bg"><img class="sc6__bg" src="image/sections/section6bg.svg"></div>
+          <div class="scrollSection">
+            <div class="scrollSection__content">
+              <div class="scrollSection__contentAlign">
+                <div class="scrollSection__icon"><img src="image/sections/section6icon.png"></div>
+                <div class="sc6">
+                  <div class="sc6__titleWrap">
+                    <div class="overflow">
+                      <p class="sc6__title">Какие задачи мы решаем?</p>
+                    </div>
+                    <div class="sc6__buttons"><a class="linkButton fbutton" href="#">Рассчитать стоимость услуг</a><a class="linkButton fbutton thin" href="#">Задайте вопрос в мессенджере</a>
+                    </div>
                   </div>
-                  <div class="sc6__buttons"><a class="linkButton fbutton" href="#">Рассчитать стоимость услуг</a><a class="linkButton fbutton thin" href="#">Задайте вопрос в мессенджере</a>
+                  <div class="sc6__cardsWrap">
+                    <div class="col1">
+                      <div class="card1 card">
+                        <p class="title">Создание сайтов и мобильных приложений</p>
+                        <p class="text">Отрисовываем прототип сайта с учетом эффективного маркетинга и продаж, верстаем сайт на современных платформах, разрабатываем дизайн, создаем адаптивную верстку сайта под все устройства, программируем все элементы и виджеты, подключаем к CRM</p>
+                      </div>
+                      <div class="card2 card">
+                        <p class="title">1С</p>
+                        <p class="text">Настраиваем и подключаем 1С и 1С Бухгалтерию, обеспечиваем техническое обслуживание 1С, перенос данных, переустановку лицензий, обновления и любые доработки по 1С.</p>
+                      </div>
+                    </div>
+                    <div class="col2">
+                      <div class="card3 card">
+                        <p class="title">Обслуживание и сопровождение сайта</p>
+                        <p class="text">Администрируем сайт, устраняем ошибки, интегрируем сервисы</p>
+                      </div>
+                      <div class="card4 card">
+                        <p class="title">Внедрение и настройка CRM «с нуля»</p>
+                        <p class="text">Подбираем эффективную CRM с учетом вашего бюджета/ниши и настраиваем ее, эффективно распределяем задачи и звонки между сотрудниками, подключаем телефонию, смс/емэйл сервисы, настраиваем CRM маркетинг и аналитику для отслеживаниā эффективности рекламных каналов , создаем и автоматизируем отчеты для руководителя/сотрудников</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="sc6__cardsWrap">
-                  <div class="col1">
-                    <div class="card1 card">
-                      <p class="title">Создание сайтов и мобильных приложений</p>
-                      <p class="text">Отрисовываем прототип сайта с учетом эффективного маркетинга и продаж, верстаем сайт на современных платформах, разрабатываем дизайн, создаем адаптивную верстку сайта под все устройства, программируем все элементы и виджеты, подключаем к CRM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cases">
+        <div class="sc__wrap globalPadding">
+          <div class="sc__bg"></div>
+          <div class="scrollSection">
+            <div class="scrollSection__content">
+              <div class="scrollSection__contentAlign">
+                <div class="scrollSection__icon"><img src="image/sections/section7icon.png"></div>
+                <div class="scrollSection__contentWrap sc7">
+                  <div class="scrollSection__textBlockWrap">
+                    <div class="overflow">
+                      <p class="scrollSection__boldText">Наши клиенты</p>
                     </div>
-                    <div class="card2 card">
-                      <p class="title">1С</p>
-                      <p class="text">Настраиваем и подключаем 1С и 1С Бухгалтерию, обеспечиваем техническое обслуживание 1С, перенос данных, переустановку лицензий, обновления и любые доработки по 1С.</p>
-                    </div>
+                    <p class="scrollSection__caption">Компании, которые доверяют нам разработку и развитие своих проектов</p>
                   </div>
-                  <div class="col2">
-                    <div class="card3 card">
-                      <p class="title">Обслуживание и сопровождение сайта</p>
-                      <p class="text">Администрируем сайт, устраняем ошибки, интегрируем сервисы</p>
-                    </div>
-                    <div class="card4 card">
-                      <p class="title">Внедрение и настройка CRM «с нуля»</p>
-                      <p class="text">Подбираем эффективную CRM с учетом вашего бюджета/ниши и настраиваем ее, эффективно распределяем задачи и звонки между сотрудниками, подключаем телефонию, смс/емэйл сервисы, настраиваем CRM маркетинг и аналитику для отслеживаниā эффективности рекламных каналов , создаем и автоматизируем отчеты для руководителя/сотрудников</p>
-                    </div>
+                  <div class="scrollSection__marquee">
+                    <div class="marquee__item"><img src="image/sections/marquee/1.png"></div>
+                    <div class="marquee__item"><img src="image/sections/marquee/2.png"></div>
+                    <div class="marquee__item"><img src="image/sections/marquee/3.png"></div>
+                    <div class="marquee__item"><img src="image/sections/marquee/4.png"></div>
+                    <div class="marquee__item"><img src="image/sections/marquee/5.png"></div>
+                    <div class="marquee__item"><img src="image/sections/marquee/6.png"></div>
                   </div>
                 </div>
               </div>
@@ -157,66 +189,42 @@
           </div>
         </div>
       </div>
-      <div class="sc__wrap globalPadding">
-        <div class="sc__bg"></div>
-        <div class="scrollSection">
-          <div class="scrollSection__content">
-            <div class="scrollSection__contentAlign">
-              <div class="scrollSection__icon"><img src="image/sections/section7icon.png"></div>
-              <div class="scrollSection__contentWrap sc7">
-                <div class="scrollSection__textBlockWrap">
-                  <div class="overflow">
-                    <p class="scrollSection__boldText">Наши клиенты</p>
-                  </div>
-                  <p class="scrollSection__caption">Компании, которые доверяют нам разработку и развитие своих проектов</p>
-                </div>
-                <div class="scrollSection__marquee">
-                  <div class="marquee__item"><img src="image/sections/marquee/1.png"></div>
-                  <div class="marquee__item"><img src="image/sections/marquee/2.png"></div>
-                  <div class="marquee__item"><img src="image/sections/marquee/3.png"></div>
-                  <div class="marquee__item"><img src="image/sections/marquee/4.png"></div>
-                  <div class="marquee__item"><img src="image/sections/marquee/5.png"></div>
-                  <div class="marquee__item"><img src="image/sections/marquee/6.png"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sc__wrap globalPadding">
-        <div class="sc__bg"></div>
-        <div class="scrollSection">
-          <div class="scrollSection__content">
-            <div class="scrollSection__contentAlign">
-              <div class="scrollSection__icon"><img src="image/sections/section8icon.png"></div>
-              <div class="scrollSection__contentWrap sc8">
-                <div class="scrollSection__textBlockWrap">
-                  <div class="overflow">
-                    <p class="scrollSection__boldText">Наша команда</p>
-                  </div>
-                  <p class="scrollSection__caption">Когда за работой профессионалы, ваш проект в надежных руках</p>
-                </div>
-                <div class="scrollSection__team">
-                  <div class="team__wrap">
-                    <div class="team__photoWrap"><img class="team__photo" src="image/sections/team1.png">
-                      <p class="team__name">Аленин Александр</p>
+      <div id="team">
+        <div class="sc__wrap globalPadding">
+          <div class="sc__bg"></div>
+          <div class="scrollSection">
+            <div class="scrollSection__content">
+              <div class="scrollSection__contentAlign">
+                <div class="scrollSection__icon"><img src="image/sections/section8icon.png"></div>
+                <div class="scrollSection__contentWrap sc8">
+                  <div class="scrollSection__textBlockWrap">
+                    <div class="overflow">
+                      <p class="scrollSection__boldText">Наша команда</p>
                     </div>
-                    <div class="team__infoWrap">
-                      <div class="team__links"><a class="team__link" href="#"><img src="image/sections/vk.png"></a><a class="team__link" href="#"><img src="image/sections/tg.png"></a></div>
-                      <P class="team__name">Аленин Александр</P>
-                      <P class="team__job">CRM-Архитектор</P>
-                      <P class="team__text">Создает рабочие механики по упрощению работы в цифровой среде.</P>
-                    </div>
+                    <p class="scrollSection__caption">Когда за работой профессионалы, ваш проект в надежных руках</p>
                   </div>
-                  <div class="team__wrap">
-                    <div class="team__photoWrap"><img class="team__photo" src="image/sections/team2.png">
-                      <p class="team__name">Тарасов Артур</p>
+                  <div class="scrollSection__team">
+                    <div class="team__wrap">
+                      <div class="team__photoWrap"><img class="team__photo" src="image/sections/team1.png">
+                        <p class="team__name">Аленин Александр</p>
+                      </div>
+                      <div class="team__infoWrap">
+                        <div class="team__links"><a class="team__link" href="#"><img src="image/sections/vk.png"></a><a class="team__link" href="#"><img src="image/sections/tg.png"></a></div>
+                        <P class="team__name">Аленин Александр</P>
+                        <P class="team__job">CRM-Архитектор</P>
+                        <P class="team__text">Создает рабочие механики по упрощению работы в цифровой среде.</P>
+                      </div>
                     </div>
-                    <div class="team__infoWrap">
-                      <div class="team__links"><a class="team__link" href="#"><img src="image/sections/vk.png"></a><a class="team__link" href="#"><img src="image/sections/tg.png"></a></div>
-                      <P class="team__name">Тарасов Артур</P>
-                      <P class="team__job">Back-end программист</P>
-                      <P class="team__text">Специалист, который принимает самые сложные вызовы. Внедрение бонусной программы, программирование сайта или интеграция кастомных функций в бизнес - это сделает Артур.</P>
+                    <div class="team__wrap">
+                      <div class="team__photoWrap"><img class="team__photo" src="image/sections/team2.png">
+                        <p class="team__name">Тарасов Артур</p>
+                      </div>
+                      <div class="team__infoWrap">
+                        <div class="team__links"><a class="team__link" href="#"><img src="image/sections/vk.png"></a><a class="team__link" href="#"><img src="image/sections/tg.png"></a></div>
+                        <P class="team__name">Тарасов Артур</P>
+                        <P class="team__job">Back-end программист</P>
+                        <P class="team__text">Специалист, который принимает самые сложные вызовы. Внедрение бонусной программы, программирование сайта или интеграция кастомных функций в бизнес - это сделает Артур.</P>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -362,7 +370,7 @@
       </div>
       <div class="block2">
         <div class="b2__line1"><a class="b2__logo" href="#"><img src="image/logo.png"></a>
-          <div class="b2__navs"><a class="b2__nav">О нас</a><a class="b2__nav">Услуги</a><a class="b2__nav">Кейсы</a><a class="b2__nav">Команда</a></div>
+          <div class="b2__navs"><a class="b2__nav" href="#about">О нас</a><a class="b2__nav" href="#service">Услуги</a><a class="b2__nav" href="#cases">Кейсы</a><a class="b2__nav" href="#team">Команда</a></div>
           <div class="b2__links"><a class="b2_link" href="#"><img src="image/sections/vk.png"></a><a class="b2_link" href="#"><img src="image/sections/tg.png"></a></div>
         </div>
         <div class="line-gap"></div>

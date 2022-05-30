@@ -44,18 +44,18 @@ $(document).ready(function () {
         if (section.has('.img1').length != 0) {
             gsap.from(section.find('.img1'), {
                 opacity: 0,
-                x: 35,
                 scrollTrigger: triggerOpt,
             })
         }
 
         if (section.has('.img2').length != 0) {
-            gsap.from(section.find('.img2'), {
-                opacity: 0,
-                x: 25,
-                scrollTrigger: triggerOpt,
-                delay: .1
-            })
+            gsap.timeline()
+                .from(section.find('.img2'), {
+                    opacity: 0,
+                    scrollTrigger: triggerOpt,
+                    delay: .1
+                })
+
         }
 
         if (section.has('.sc6').length != 0) {
@@ -147,9 +147,82 @@ $(document).ready(function () {
                 delay: .5
             })
         }
+    })
 
+    $(document).mousemove(function (event) {
 
+        $(".img1").each(function (index, element) {
+            var xPos = (event.clientX / $(window).width()) - 0.5,
+                yPos = (event.clientY / $(window).height()) - 0.5,
+                box = element;
 
+            gsap.to(box, {
+                x: xPos * 100,
+                y: yPos * 100,
+                ease: Power1.easeOut,
+            });
+        })
+
+        $(".img2").each(function (index, element) {
+            var xPos = (event.clientX / $(window).width()) - 0.5,
+                yPos = (event.clientY / $(window).height()) - 0.5,
+                box = element;
+
+            gsap.to(box, {
+                x: -xPos * 100,
+                y: -yPos * 100,
+                ease: Power1.easeOut,
+            });
+        })
+    });
+
+    const header = $('.header')
+    const logo = header.find('.header__logo')
+    const navs = header.find('.header__navs')
+    const hero = $('.hero')
+    const service = $('#service')
+
+    const checkPos = () => {
+        console.log(service.offset().top)
+
+        if (
+            (hero.offset().top <= header.offset().top
+                && header.offset().top < hero.outerHeight() + hero.offset().top)
+            || (service.offset().top <= header.offset().top
+                && header.offset().top < service.outerHeight() + service.offset().top)
+        ) {
+            header.addClass('white')
+        } else {
+            header.removeClass('white')
+        }
+    }
+
+    checkPos()
+    $(document).on('scroll', function () {
+        checkPos()
+        console.log(header.offset().top)
+    })
+
+    gsap.from($('.hero__bg img'), {
+        opacity: 0,
+        delay: .2
+    })
+
+    gsap.from($('.hero__title'), {
+        opacity: 0,
+        x: 15,
+        delay: .5
+    })
+
+    gsap.from($('.hero__caption'), {
+        opacity: 0,
+        delay: .9
+    })
+
+    gsap.from($('.hero__content a'), {
+        opacity: 0,
+        y: 15,
+        delay: 1
     })
 
 
