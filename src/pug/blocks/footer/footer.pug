@@ -17,14 +17,19 @@ div.footer
         div.b1__form
             div.footer__inputWrap
                 p.input__title Имя
-                input(id='fName').footer__input
+                input(id='fName' required).footer__input
             div.footer__inputWrap
                 p.input__title Email
-                input(id='fEmail').footer__input
+                input(id='fEmail' required).footer__input
             div.footer__inputWrap
                 p.input__title Комментарий
-                textarea(id='fText' ).footer__input
-            div.footer__inputWrap.btn
+                textarea(id='fText'  required).footer__input
+            div.footer__inputWrap
+                div.form__checkbox
+                    input(type='checkbox' required)
+                    p.checkbox__text Я согласен с обработкой данных
+
+            button(type='submit' onclick='submit' id='fSubmit').footer__inputWrap.btn
                 +linkButton('Отправить', '#')
 
     div.block2
@@ -52,6 +57,8 @@ div.footer
 
 
 script(src='js/lib/jquery.min.js')
+script(src='js/lib/gsap.min.js')
+script(src='js/lib/ScrollTrigger.min.js')
 script(src='js/lib/slick.min.js')
 script(src='js/lib/swiper-bundle.min.js')
 script(src='js/lib/jquery.fancybox.min.js')

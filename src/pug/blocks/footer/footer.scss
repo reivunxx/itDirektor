@@ -160,8 +160,10 @@
     flex-direction: column;
     margin-bottom: 24px;
 
-    &.btn{
+    &.btn {
       width: max-content;
+      background: none;
+      border: none;
     }
 
     .input__title {
@@ -172,11 +174,11 @@
       margin-bottom: 8px;
     }
 
-    textarea{
+    textarea {
       height: 180px;
     }
 
-    .footer__input{
+    .footer__input {
       width: 100%;
       border-radius: 6px;
       font-weight: 300;
@@ -185,5 +187,18 @@
       padding: 12px;
       resize: none;
     }
+  }
+
+  .form__checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #989898;
+    margin-left: 8px;
   }
 }
