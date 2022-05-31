@@ -186,10 +186,25 @@ $(document).ready(function () {
     });
 
     const header = $('.header')
-    const logo = header.find('.header__logo')
-    const navs = header.find('.header__navs')
     const hero = $('.hero')
     const service = $('#service')
+    const btn = $('.header__mobileBtn')
+    const btnIcon = btn.find('.mb__wrap')
+    const mm = $('.header__mobile')
+    const mmNavs = $('.header__mobile .mm__nav')
+
+    btn.click(function () {
+        btnIcon.toggleClass('active')
+        mm.toggleClass('active')
+        checkPos()
+    })
+
+    mmNavs.click(function () {
+        btnIcon.removeClass('active')
+        mm.removeClass('active')
+        checkPos()
+    })
+
 
     const checkPos = () => {
         if (
@@ -197,6 +212,7 @@ $(document).ready(function () {
                 && header.offset().top < hero.outerHeight() + hero.offset().top)
             || (service.offset().top <= header.offset().top
                 && header.offset().top < service.outerHeight() + service.offset().top)
+            || (btnIcon.hasClass('active'))
         ) {
             header.addClass('white')
         } else {

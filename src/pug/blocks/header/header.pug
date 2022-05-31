@@ -1,3 +1,5 @@
+include ../mixins/mixins.pug
+
 div.header.globalPadding
     a.header__logo
         img(src='image/logo.png')
@@ -9,7 +11,23 @@ div.header.globalPadding
     div.header__buttons
         +linkButtonThin("Написать нам")
         +linkButton("Войти")
+    div.header__mobileBtn
+        div.mb__overflow
+            div.mb__wrap
+                img(src='image/mobileOpen.svg').img1
+                img(src='image/mobileClose.svg').img2
+div.header__mobile
+    .mm__bg(style='background: center / cover url("image/mmbg.svg") ')
+    .mm__wrap
+        .mm__buttons
+            +linkButton('Войти')
+            +linkButtonThin('Написать нам')
 
+        div.mm__navs
+            a(href='#about').mm__nav О нас
+            a(href='#service').mm__nav Услуги
+            a(href="#cases").mm__nav Кейсы
+            a(href='#team').mm__nav Команда
 
 
 
