@@ -58,4 +58,10 @@
     gap: 20px;
     justify-content: flex-end;
   }
+
+  @media (max-width: 768px){
+    .header__buttons, .header__navs{
+      display: none;
+    }
+  }
 }

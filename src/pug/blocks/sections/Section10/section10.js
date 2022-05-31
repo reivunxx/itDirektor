@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const swiper = new Swiper('.sc10__slider',{
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 20,
         scrollbar: {
             el: '.sc10swiper-scrollbar',
             draggable: true
@@ -12,13 +12,9 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            1400: {
+            1600: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 40,
             }
         }
     });

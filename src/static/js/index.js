@@ -158,30 +158,31 @@ $(document).ready(function () {
     })
 
     $(document).mousemove(function (event) {
+        if (window.outerWidth > 768) {
+            $(".img1").each(function (index, element) {
+                var xPos = (event.clientX / $(window).width()) - 0.5,
+                    yPos = (event.clientY / $(window).height()) - 0.5,
+                    box = element;
 
-        $(".img1").each(function (index, element) {
-            var xPos = (event.clientX / $(window).width()) - 0.5,
-                yPos = (event.clientY / $(window).height()) - 0.5,
-                box = element;
+                gsap.to(box, {
+                    x: xPos * 100,
+                    y: yPos * 100,
+                    ease: Power1.easeOut,
+                });
+            })
 
-            gsap.to(box, {
-                x: xPos * 100,
-                y: yPos * 100,
-                ease: Power1.easeOut,
-            });
-        })
+            $(".img2").each(function (index, element) {
+                var xPos = (event.clientX / $(window).width()) - 0.5,
+                    yPos = (event.clientY / $(window).height()) - 0.5,
+                    box = element;
 
-        $(".img2").each(function (index, element) {
-            var xPos = (event.clientX / $(window).width()) - 0.5,
-                yPos = (event.clientY / $(window).height()) - 0.5,
-                box = element;
-
-            gsap.to(box, {
-                x: -xPos * 100,
-                y: -yPos * 100,
-                ease: Power1.easeOut,
-            });
-        })
+                gsap.to(box, {
+                    x: -xPos * 100,
+                    y: -yPos * 100,
+                    ease: Power1.easeOut,
+                });
+            })
+        }
     });
 
     const header = $('.header')
@@ -191,8 +192,6 @@ $(document).ready(function () {
     const service = $('#service')
 
     const checkPos = () => {
-        console.log(service.offset().top)
-
         if (
             (hero.offset().top <= header.offset().top
                 && header.offset().top < hero.outerHeight() + hero.offset().top)
@@ -208,7 +207,6 @@ $(document).ready(function () {
     checkPos()
     $(document).on('scroll', function () {
         checkPos()
-        console.log(header.offset().top)
     })
 
     gsap.from($('.hero__bg img'), {

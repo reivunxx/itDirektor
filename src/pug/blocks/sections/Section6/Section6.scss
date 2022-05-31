@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
 
-  .linkButton.thin{
+  .linkButton.thin {
     border-color: white;
     color: white;
   }
@@ -14,17 +14,31 @@
     width: 100%;
     justify-content: space-between;
 
+    @media (max-width: 768px){
+      flex-direction: column;
+    }
+
     .sc6__title {
       font-weight: 900;
       font-size: 36px;
       line-height: 120%;
       color: white;
+
+      @media (max-width: 768px){
+        font-size: 24px;
+      }
     }
 
     .sc6__buttons {
       display: flex;
       align-items: center;
       gap: 20px;
+
+      @media (max-width: 768px){
+        flex-direction: column;
+        margin-top: 60px;
+        width: 100%;
+      }
 
     }
   }
@@ -33,6 +47,32 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 120px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 60px;
+
+      .col1, .col2 {
+        margin-right: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box;
+      }
+
+      .card1, .card2, .card3, .card4 {
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 40px !important;
+        margin-left: 0 !important;
+      }
+
+      .card{
+        padding: 20px !important;
+
+        .text{
+          font-size: 12px !important;
+        }
+      }
+    }
 
     .card {
       background: rgba(28, 32, 49, 0.9);

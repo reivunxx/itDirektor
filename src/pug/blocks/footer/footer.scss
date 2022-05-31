@@ -13,6 +13,12 @@
     justify-content: space-between;
     box-sizing: border-box;
 
+    @media (max-width: 768px){
+      height: 100%;
+      padding: 60px 16px;
+      flex-direction: column;
+    }
+
     .block1BG {
       position: absolute;
       left: 0;
@@ -27,6 +33,11 @@
 
     .b1__textWrap {
 
+      @media (max-width: 768px){
+        width: 100%;
+        margin-bottom: 52px;
+      }
+
       .b1__titleWrap {
         margin-bottom: 32px;
         display: flex;
@@ -38,12 +49,21 @@
         font-size: 36px;
         line-height: 120%;
         margin-bottom: 24px;
+
+        @media (max-width: 768px){
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
       }
 
       .b1__text {
         font-weight: 300;
         font-size: 16px;
         line-height: 150%;
+
+        @media (max-width: 768px){
+          font-size: 12px;
+        }
       }
 
       .b1__textWithicon {
@@ -72,8 +92,11 @@
     flex-direction: column;
     align-items: center;
     padding: 40px 128px;
-
     background: #2F253F;
+
+    @media (max-width: 768px){
+      padding: 16px;
+    }
 
 
     .b2__line1 {
@@ -83,9 +106,14 @@
       width: 100%;
 
 
+
       .b2__navs {
         display: flex;
         align-items: center;
+
+        @media (max-width: 768px){
+          display: none;
+        }
 
         .b2__nav {
           color: white;
@@ -110,7 +138,15 @@
         align-items: center;
 
         .b2_link {
-          margin-left: 12px;
+
+
+          &:not(:first-child){
+            margin-left: 12px;
+
+            @media (max-width: 768px){
+              margin-left: 20px;
+            }
+          }
 
           img {
             height: 24px;
@@ -134,6 +170,12 @@
       display: flex;
       align-items: center;
 
+      @media (max-width: 768px){
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+      }
+
       .line2__text {
         font-weight: 300;
         font-size: 12px;
@@ -142,6 +184,11 @@
 
         &:not(:last-child) {
           margin-right: 24px;
+        }
+
+        @media (max-width: 768px){
+          margin-right: 0 !important;
+          margin-top: 20px;
         }
       }
     }
@@ -154,6 +201,12 @@
   flex-direction: column;
   width: 660px;
   margin-left: 40px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px){
+    width: 100%;
+    margin-left: 0;
+  }
 
   .footer__inputWrap {
     display: flex;
@@ -164,6 +217,10 @@
       width: max-content;
       background: none;
       border: none;
+
+      @media (max-width: 768px){
+        width: 100%;
+      }
     }
 
     .input__title {
@@ -172,6 +229,10 @@
       line-height: 120%;
       color: white;
       margin-bottom: 8px;
+
+      @media (max-width: 768px){
+        font-size: 16px;
+      }
     }
 
     textarea {
@@ -186,6 +247,7 @@
       line-height: 150%;
       padding: 12px;
       resize: none;
+      box-sizing: border-box;
     }
   }
 

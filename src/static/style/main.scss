@@ -29,9 +29,20 @@ a {
 
 .globalPadding{
   padding: 0 128px;
+
+  @media (max-width: 1500px) {
+    padding: 0 64px;
+  }
+
+  @media (max-width: 768px){
+    padding: 0 16px;
+  }
+
+  @media (max-width: 768px){
+  }
 }
 
 #container{
-  overflow: visible;
+
   width: 100%;
 }
